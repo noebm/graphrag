@@ -112,7 +112,7 @@ class BlobPipelineStorage(PipelineStorage):
         -------
                 An iterator of blob names and their corresponding regex matches.
         """
-        base_dir = base_dir or ""
+        base_dir = base_dir or self._path_prefix
 
         log.info(
             "search container %s for files matching %s",
